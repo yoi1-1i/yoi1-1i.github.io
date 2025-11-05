@@ -1,16 +1,43 @@
 <!doctype html> <!-- Indica que es un documento HTML -->
 <html>
   <head>
-    <meta charset="utf-8" /> <!-- Permite usar acentos y caracteres españoles -->
-    <title>Apuntes p5.js</title> <!-- Nombre que aparecerá en la pestaña del navegador -->
-
-    <!-- Enlace a la librería p5.js alojada en internet -->
+    <meta charset="utf-8" /> 
+    <title>Tu nombre</title> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
   </head>
 
   <body>
-    <!-- Aquí podríamos tener texto o botones, pero nosotros solo dibujaremos -->
-    <!-- Cargamos nuestro código JavaScript donde escribiremos el dibujo -->
-    <script src="sketch.js"></script>
+    <h1>Escribe aquí lo que quieras</h1>
+
+
+    <script>
+      // La función setup() se ejecuta UNA sola vez al iniciar el programa.
+// Aquí preparamos el lienzo y dibujamos una imagen estática.
+function setup() {
+  createCanvas(400, 400); // Crea un lienzo de 400x400 píxeles
+  background(200);        // Fondo blanco
+
+  // Lado superior 
+  stroke(99, 27, 13, 120);      
+  strokeWeight(8);        
+  line(100, 100, 256, 100);
+
+  // Lado derecho 
+  stroke(13, 62, 99); 
+  strokeWeight(6);        
+  line(256, 100, 256, 256);
+
+  // Lado inferior
+  stroke(180, 86, 232, 68);      
+  strokeWeight(7);        
+  line(256, 256, 100, 256);
+
+  // Lado izquierdo
+  stroke(61, 135, 90);            
+  strokeWeight(10);        
+  line(100, 256, 100, 100);
+}
+
+    </script>
   </body>
 </html>
