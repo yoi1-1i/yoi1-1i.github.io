@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" /> 
+    <title>Tu nombre</title> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Coche</h1>
+
+
+    <script>
+      
+    function setup() {
+    createCanvas(800, 800);
+	
+    background(181, 227, 232);
+	
+	// Césped
+	stroke(72, 122, 88);
+	strokeWeight(5)
+	fill(96, 156, 115);
+	rect(0, 600, 800, 200);
+	
+	// Casa
+	stroke(235, 219, 134);
+	strokeWeight(4);
+	fill(235, 239, 117);
+	rect(450, 300, 300, 300);
+	
+	// Puerta
+	stroke(156, 111, 55);
+	strokeWeight(2)
+	fill(179, 127, 86);
+	rect(575, 475, 50, 125);
+	
+	// Pomo de la puerta
+	stroke(235, 219, 134);
+	strokeWeight(4);
+	fill(235, 239, 117);
+	circle(620, 550, 10);
+	
+	// Tejado casa
+	stroke(140, 43, 59);
+	strokeWeight(6);
+	fill(173, 69, 85);
+	triangle(400, 350, 600, 100, 800, 350);
+
+       // Ventanas de la fachada
+       stroke(102, 69, 75); //242
+       strokeWeight(1);
+       fill(214, 255, 246);
+       rect(475, 375, 250, 75);
+       stroke(102, 69, 75); //242
+       strokeWeight(1);
+       line(475, 425, 725, 425);
+       line(559, 375, 559, 450);
+       line(642, 375, 642, 450);
+
+       strokeWeight(4);       
+       line(475, 400, 475, 450);
+       line(725, 400, 725, 450);
+       line(475, 425, 725, 425);
+       strokeWeight(6);
+       line(475, 450, 725, 450);
+
+     
+      //Coche descapotable
+       noFill()
+       strokeWeight(2)
+       arc(400, 550, 275, 150, PI, 0);
+       noStroke()
+       fill(54, 68, 94)
+       rect(250, 550, 300, 100);
+       stroke(29, 41, 61)
+       strokeWeight(5)
+       fill(0)
+       circle(275, 625, 75);
+       circle(525, 625, 75);
+       fill(209)
+       noStroke()
+       circle(275, 625, 35);
+       circle(525, 625, 35);
+	
+	
+    }
+
+    </script>
+  </body>
+</html>
