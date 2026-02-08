@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>IF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  </head>
+  <body>
+  <script>
+  //definimos variables
+  let xS,yS,dS,rS,vS;
+  let xL,yL,dL,rL,vL;
+  function setup () {
+  createCanvas (800,800);
+  //ponemos las medidas
+  //sol
+  dS =0.18*width;
+  rS= dS/2;
+  yS =0.35*height;
+  xS= -rS;
+  vS= width/400;
+  //luna
+  dL= dS*0.5;
+  rL=dL/2;
+  xL=-width-6*rL;
+  yL=height/3;
+  vL=vS;
+  //Suelo (decoración)
+  noStroke();
+  fill(34, 112, 50);
+  rect(0, 0.8*height, width, 0.2*height);
+  }
+  function draw (){
+  if (xS <= width + rS){
+    // Día mientras el borde izquierdo del Sol no ha salido por la derecha
+    background(102, 175, 212);   // azul
+   }
+   else {
+    // Noche cuando el Sol ya salió completamente por la derecha
+    background(0);// negro
+      
+   }
+  //Suelo (decoración)
+  noStroke();
+  fill(34, 112, 50);
+  rect(0, 0.8*height, width, 0.2*height);
+  //Luna
+  noStroke();
+  fill(200);
+  circle(xL,yL,dL);
+  //velocidad
+  xL +=vL;
+  //Sol (si está fuera, no se verá)
+  noStroke();
+  fill(249, 235, 37);
+  circle(xS, yS, dS);
+  //medidas Sol
+  xS +=vS;
+  // 3.5 Reinicio por posición (noche suficientemente larga)
+  if (xS > 2*width + rS) {
+   xS = -rS;//reentrar por la izquierda
+  }
+  if (xL >2*width +rL) {
+  xL= -rL;
+  }
+}    
+</script>
+</body>
+</html>
