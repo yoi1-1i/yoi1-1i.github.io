@@ -36,7 +36,17 @@
   <div>
    <h3> Explicación de cómo funciona el código</h3>
 
-   <p> Sustituye este párrafo por una explicación, en varios párrafos de lo que hace el script, bloque a bloque, que habéis utilizado para la tarea. Es un script muy avanzado para vosotros, pero sí estáis en condiciones de analizarlo parte a parte y ver que hace cada parte. Cuanto mejor esté explicado, mejor será la nota en la tarea. Una explicación de un párrafo tendrá poca nota </p>
+   <p> Este código es una página web que usa la cámara del móvil o del ordenador para detectar objetos en tiempo real con inteligencia artificial. Primero, en la parte del <head>, se carga la librería ml5.js, que es la que permite usar modelos ya entrenados sin tener que programarlos desde cero. También se añaden algunos estilos para que todo se vea ordenado.
+
+En el <body> hay un botón para encender la cámara, unos textos que indican el estado y la mejor detección, y luego el vídeo con la cámara. Encima del vídeo hay un canvas, que es donde se dibujan los cuadros alrededor de los objetos detectados.
+
+En el script, primero se guardan todos los elementos del HTML en variables. Luego, la función initCamera() enciende la cámara usando getUserMedia. Cuando el vídeo ya está listo, ajusta el tamaño del canvas para que coincida con el del vídeo.
+
+Después, la función draw() dibuja rectángulos y nombres sobre los objetos detectados, y la función pickBest() se queda con el objeto que tenga más porcentaje de acierto.
+
+La función más importante es loopDetect(), que está todo el rato analizando lo que ve la cámara. Detecta objetos, los dibuja y actualiza la mejor detección en pantalla.
+
+Por último, cuando pulsas el botón, se inicia todo: se enciende la cámara, se carga el modelo de detección (COCO-SSD) y empieza el análisis. </p>
 
   </div>
 
